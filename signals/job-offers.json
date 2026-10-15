@@ -1,0 +1,15 @@
+{
+  "name": "Companies hiring SDRs in France",
+  "status": "draft",
+  "dailyLeadLimit": 20,
+  "config": {
+    "jobTitleInclude": ["SDR", "Sales Development Representative", "Business Developer"],
+    "jobTitleExclude": ["Intern", "Stage", "Alternance"],
+    "locations": ["France"],
+    "companySizeFilters": ["11-50", "51-200"],
+    "publishedDate": "7d",
+    "enablePersonaTargeting": true,
+    "targetPersonas": ["Sales Director"],
+    "getEmails": true
+  }
+}

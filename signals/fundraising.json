@@ -1,0 +1,14 @@
+{
+  "name": "Seed to Series B in France",
+  "status": "draft",
+  "dailyLeadLimit": 20,
+  "config": {
+    "investmentTypes": ["seed", "series_a", "series_b"],
+    "amountMin": 1000000,
+    "announcedPeriod": "30d",
+    "hqLocations": ["France"],
+    "enablePersonaTargeting": true,
+    "targetPersonas": ["CEO"],
+    "getEmails": true
+  }
+}

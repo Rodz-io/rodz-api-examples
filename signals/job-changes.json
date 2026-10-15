@@ -1,0 +1,13 @@
+{
+  "name": "New sales leaders in France",
+  "status": "draft",
+  "dailyLeadLimit": 20,
+  "config": {
+    "jobTitles": ["Sales Director"],
+    "customTitles": ["Head of Revenue"],
+    "excludedTitles": ["Intern"],
+    "companySizeFilters": ["51-200", "201-500"],
+    "locations": ["France"],
+    "getEmails": true
+  }
+}

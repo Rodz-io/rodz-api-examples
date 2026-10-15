@@ -1,0 +1,13 @@
+{
+  "name": "People connecting with my competitors",
+  "status": "draft",
+  "dailyLeadLimit": 20,
+  "config": {
+    "linkedinCompanyUrls": ["https://www.linkedin.com/company/your-competitor"],
+    "targetPersonas": ["Sales Director", "Marketing Director"],
+    "companySizeFilters": ["51-200", "201-500"],
+    "locations": ["France"],
+    "excludedTitles": ["Intern"],
+    "getEmails": true
+  }
+}
