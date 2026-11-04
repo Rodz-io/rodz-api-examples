@@ -1,9 +1,11 @@
 # Rodz API examples
 
 **Rodz detects buying signals (job changes, funding rounds, hiring, people engaging with your competitors, technology adoption, public tenders and more) and delivers each matching prospect as an enriched lead, to your webhook, your CRM or your sales tool.**
-Pay per lead delivered, in credits; data hosted in Europe. API reference: <https://api.rodz.io/docs>.
+Rodz produces 46 signal types (<https://www.rodz.io/en/product/signals/>). With the API you create a signal, set its filters, and receive each new lead (the person, their company and the event that triggered it) by webhook or by polling. Pay per lead delivered, in credits; data hosted in Europe. API reference: <https://api.rodz.io/docs>. Overview: <https://www.rodz.io/en/api/>.
 
 Short, runnable examples in **curl**, **Python** (`requests`) and **JavaScript** (Node 18+ `fetch`, no dependencies), plus how to plug Rodz into **Claude** with MCP.
+
+**Who this is for:** developers adding buying signals to a product, a CRM sync or an internal tool; growth and RevOps teams wiring signals into n8n, Make or Clay through webhooks; builders of AI agents that need fresh B2B events through MCP.
 
 ## Use cases
 
@@ -67,10 +69,29 @@ python scripts/validate_against_spec.py
 
 No API key needed, nothing is created, no credits are spent.
 
+## FAQ
+
+**Is there an API for job change alerts?**
+Yes. Create a `job-changes` signal ([body](signals/job-changes.json)) with the job titles, locations and company sizes you target, and every decision-maker who starts a new role in that scope is delivered as a lead to your webhook or read with `GET /api/v1/signals/{id}/leads`.
+
+**Can I get new funding rounds through an API?**
+Yes. A `fundraising` signal ([body](signals/fundraising.json)) delivers each newly announced round that matches your filters as a lead, with the company and the decision-maker to contact.
+
+**Can an AI agent use Rodz?**
+Yes. Rodz runs a hosted MCP server at `https://api.rodz.io/mcp`: Claude, Claude Code, Cursor or any MCP client can create signals, read leads and enrich contacts in plain language. Setup: [claude-mcp/](claude-mcp/README.md) and <https://www.rodz.io/en/rodz-in-claude/>.
+
+**How is it priced?**
+Per lead delivered, in credits, with no subscription; the credits per lead of each signal type come from `GET /api/v1/signal-types` (see [What it costs](#what-it-costs)). Credit packs: <https://www.rodz.io/en/pricing/>.
+
 ## Links
 
+- API overview: <https://www.rodz.io/en/api/> (French: <https://www.rodz.io/fr/api/>)
 - API reference: <https://api.rodz.io/docs> (OpenAPI: <https://api.rodz.io/openapi.json>)
-- Website and pricing: <https://www.rodz.io>
+- Rodz in Claude (MCP): <https://www.rodz.io/en/rodz-in-claude/>
+- The 46 signal types: <https://www.rodz.io/en/product/signals/>
+- Pricing: <https://www.rodz.io/en/pricing/>
 - Support: support@rodz.io
+
+Topics: buying signals, intent signals, trigger events, job change alerts, funding round alerts, B2B lead generation API, sales intelligence, MCP server, webhooks.
 
 MIT licence.
